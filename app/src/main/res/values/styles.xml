@@ -1,0 +1,29 @@
+<resources>
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+        <!--Action bar style-->
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="height">@dimen/bar_height</item>
+        <!-- app branding color for the app bar -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Main theme colors -->
+        <!-- app branding color for the app bar -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <!--   darker variant for the status bar and contextual app bars -->
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <!--   theme UI controls like checkboxes and text fields -->
+        <!--   native widgets will now be "tinted" with accent color -->
+        <item name="colorAccent">@color/accentColor</item>
+    </style>
+
+</resources>

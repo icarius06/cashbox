@@ -1,0 +1,110 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="General Settings">
+
+        <ListPreference
+            android:key="list_preference"
+            android:title="@string/organization"
+            android:summary="@string/organization_summary"
+            android:entries="@array/syncFrequency"
+            android:entryValues="@array/syncFrequencyValues"
+            android:dialogTitle="@string/organization" />
+
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="@string/branch_name"
+            android:summary="@string/branch_name_summary"
+            android:dialogTitle="@string/branch_name" />
+
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="@string/branch_code"
+            android:summary="@string/branch_code_summary"
+            android:dialogTitle="@string/branch_code" />
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Order Settings">
+
+        <CheckBoxPreference android:key="full_sms"
+            android:title="Order Switch"
+            android:summary="Show full SMS message"
+            android:defaultValue="true" />
+
+        <ListPreference android:key="default_sort"
+            android:title="Sort Order"
+            android:summary="Date Descending"
+            android:entries="@array/syncFrequency"
+            android:entryValues="@array/syncFrequencyValues"
+            android:defaultValue="3" />
+
+        <CheckBoxPreference android:key="time_format"
+            android:title="Time Format"
+            android:summary="Use 24-hour format"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Loyalty Settings">
+        <CheckBoxPreference
+            android:key="checkbox_preference"
+            android:title="R and R"
+            android:summary="@string/pref_send_report_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Bluetooth/Printer">
+        <CheckBoxPreference
+            android:key="checkbox_preference"
+            android:title="Printer Switch"
+            android:summary="@string/pref_send_report_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Cash Box">
+        <CheckBoxPreference
+            android:key="checkbox_preference"
+            android:title="Printer Switch"
+            android:summary="@string/pref_send_report_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Other Settings">
+        <!-- This PreferenceScreen tag serves as a screen break (similar to page break
+             in word processing). Like for other preference types, we assign a key
+             here so it is able to save and restore its instance state. -->
+        <PreferenceScreen
+            android:key="screen_preference"
+            android:title="Preferences"
+            android:summary="@string/pref_update_setting">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+
+            <CheckBoxPreference
+                android:key="next_screen_checkbox_preference"
+                android:title="Inventory Switch"
+                android:summary="@string/pref_send_report_summary" />
+
+            <CheckBoxPreference
+                android:key="next_screen_checkbox_preference"
+                android:title="Sound Switch"
+                android:summary="@string/pref_send_report_summary" />
+
+            <CheckBoxPreference
+                android:key="next_screen_checkbox_preference"
+                android:title="Vibrate Switch"
+                android:summary="@string/pref_send_report_summary" />
+
+            <CheckBoxPreference
+                android:key="next_screen_checkbox_preference"
+                android:title="Syncing Switch"
+                android:summary="@string/pref_send_report_summary" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <!-- Row 1 with 2 columns -->
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/ordersBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add_shopping"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/orders"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_menu_size"
+                    android:text="@string/orders"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/transactionsBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_event_note"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/transactions"
+                    android:text="@string/transactions"
+                    android:textSize="@dimen/text_menu_size"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </TableRow>
+
+        <!-- Row 2 with 2 columns -->
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/accountsBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_folder_open"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accounts"
+                    android:text="@string/accounts"
+                    android:textSize="@dimen/text_menu_size"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/membersBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_group"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/members"
+                    android:text="@string/members"
+                    android:textSize="@dimen/text_menu_size"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </TableRow>
+
+        <!-- Row 3 with 2 columns -->
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/reportsBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_trending_up"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/reports"
+                    android:text="@string/reports"
+                    android:textSize="@dimen/text_menu_size"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:padding="18dip"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:id="@+id/settingsBtn"
+                    android:padding="15dp"
+                    android:background="@drawable/menu_item"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_settings"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"/>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/settings"
+                    android:text="@string/action_settings"
+                    android:textSize="@dimen/text_menu_size"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+    </ScrollView>
+
+</LinearLayout>
