@@ -24,4 +24,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.+'
     compile project(":fab")
     compile project(":slider")
+    compile project(":swipe_menu")
 }

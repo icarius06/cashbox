@@ -59,16 +59,9 @@
         android:layout_marginTop="@dimen/bar_height"
         android:layout_width="fill_parent" android:layout_height="wrap_content">
 
-        <com.astuetz.PagerSlidingTabStrip
-            android:id="@+id/tabs"
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="68dip"/>
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/pager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tabs"
-            tools:context=".MainActivity" />
+            android:layout_height="match_parent" />
     </LinearLayout>
 </FrameLayout>

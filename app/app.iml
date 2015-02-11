@@ -87,6 +87,7 @@
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="module" module-name="slider" exported="" />
+    <orderEntry type="module" module-name="swipe_menu" exported="" />
     <orderEntry type="module" module-name="fab" exported="" />
   </component>
 </module>

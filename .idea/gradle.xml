@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/libs/fab" />
             <option value="$PROJECT_DIR$/libs/slider" />
+            <option value="$PROJECT_DIR$/libs/swipe_menu" />
           </set>
         </option>
       </GradleProjectSettings>

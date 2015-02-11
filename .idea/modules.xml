@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/fab/fab.iml" filepath="$PROJECT_DIR$/libs/fab/fab.iml" />
       <module fileurl="file://$PROJECT_DIR$/libs/PagerSlidingTabStrip/slider.iml" filepath="$PROJECT_DIR$/libs/PagerSlidingTabStrip/slider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/swipe_menu/swipe_menu.iml" filepath="$PROJECT_DIR$/libs/swipe_menu/swipe_menu.iml" />
     </modules>
   </component>
 </project>

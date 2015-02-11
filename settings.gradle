@@ -1,3 +1,5 @@
-include ':app', ':fab',':slider'
+include ':app', ':fab',':slider','swipe_menu'
 project(':fab').projectDir = new File('libs/fab')
 project(':slider').projectDir = new File('libs/slider')
+project(':swipe_menu').projectDir = new File('libs/swipe_menu')
+
