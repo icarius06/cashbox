@@ -28,12 +28,9 @@ import java.util.List;
 
 import agronet.mpayer.zegetech.com.mpayercashbox.adapters.LazyAdapter;
 
-
 public class MembersActivity extends ActionBarActivity {
 
-
-
-    private List<ApplicationInfo> mAppList;
+    private ArrayList<HashMap<String,String>> mAppList= new ArrayList<HashMap<String, String>>();
     AppAdapter mAdapter;
 
     @Override
@@ -44,7 +41,6 @@ public class MembersActivity extends ActionBarActivity {
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-
         TextView mTitle = (TextView) findViewById(R.id.members_title);
         mTitle.setTextColor(getResources().getColor(R.color.white));
         Typeface face = Typeface.createFromAsset(getApplicationContext().getAssets(), String.format("fonts/roboto_extralight.ttf"));
@@ -53,25 +49,23 @@ public class MembersActivity extends ActionBarActivity {
         mTitle.setText("Members");
         SwipeMenuListView listView=(SwipeMenuListView)findViewById(R.id.listView);
 
-        mAppList = getPackageManager().getInstalledApplications(0);
         mAdapter = new AppAdapter();
         listView.setAdapter(mAdapter);
 
-        /*ArrayList<HashMap<String,String>> data  = new ArrayList<HashMap<String, String>>();
         HashMap<String,String>person = new HashMap<String, String>();
         person.put("name","Andrew Munya");
         person.put("id","254713245463");
-        data.add(person);
+        mAppList.add(person);
 
         person = new HashMap<String, String>();
         person.put("name","Bama Nabu");
         person.put("id","254720226253");
-        data.add(person);
+        mAppList.add(person);
 
         person = new HashMap<String, String>();
         person.put("name","Berth Babu");
         person.put("id","beverage@karizshop.com");
-        data.add(person);*/
+        mAppList.add(person);
 
         // Getting adapter by passing xml data ArrayList
         SwipeMenuCreator creator = new SwipeMenuCreator() {
@@ -87,7 +81,7 @@ public class MembersActivity extends ActionBarActivity {
                 // set item width
                 openItem.setWidth(dp2px(90));
                 // set item title
-                openItem.setTitle("Topup");
+                openItem.setTitle("Top Up");
                 // set item title fontsize
                 openItem.setTitleSize(18);
                 // set item title font color
@@ -158,7 +152,7 @@ public class MembersActivity extends ActionBarActivity {
         }
 
         @Override
-        public ApplicationInfo getItem(int position) {
+        public HashMap<String,String> getItem(int position) {
             return mAppList.get(position);
         }
 
@@ -175,9 +169,9 @@ public class MembersActivity extends ActionBarActivity {
                 new ViewHolder(convertView);
             }
             ViewHolder holder = (ViewHolder) convertView.getTag();
-            ApplicationInfo item = getItem(position);
-            holder.iv_icon.setImageDrawable(item.loadIcon(getPackageManager()));
-            holder.tv_name.setText(item.loadLabel(getPackageManager()));
+            HashMap<String,String> item = getItem(position);
+            holder.iv_icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_person));
+            holder.tv_name.setText(item.get("name"));
             return convertView;
         }
 
