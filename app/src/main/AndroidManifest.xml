@@ -44,6 +44,10 @@
             android:name=".ReportsActivity"
             android:label="@string/title_activity_reports" >
         </activity>
+        <activity
+            android:name=".SelectedMemberActivity"
+            android:label="@string/title_activity_selected_member" >
+        </activity>
     </application>
 
 </manifest>

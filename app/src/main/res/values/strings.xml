@@ -33,5 +33,6 @@
     <string name="pref_user_profile">User Profile</string>
     <string name="pref_update_setting">Update Settings</string>
     <string name="title_activity_add_transactions">AddTransactionsActivity</string>
+    <string name="title_activity_selected_member">SelectedMemberActivity</string>
 
 </resources>

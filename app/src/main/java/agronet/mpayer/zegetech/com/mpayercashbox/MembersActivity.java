@@ -1,5 +1,6 @@
 package agronet.mpayer.zegetech.com.mpayercashbox;
 
+import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -89,7 +90,7 @@ public class MembersActivity extends ActionBarActivity {
                 // set item title
                 openItem.setTitle("Top Up");
                 // set item title fontsize
-                openItem.setTitleSize(18);
+                openItem.setTitleSize(16);
                 // set item title font color
                 openItem.setTitleColor(Color.WHITE);
                 // add to menu
@@ -116,7 +117,7 @@ public class MembersActivity extends ActionBarActivity {
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        Toast.makeText(MembersActivity.this,"Open",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MembersActivity.this,"Top up account",Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
                         Toast.makeText(MembersActivity.this,"Delete",Toast.LENGTH_SHORT).show();
@@ -130,7 +131,9 @@ public class MembersActivity extends ActionBarActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MembersActivity.this,"Open selected item",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MembersActivity.this, SelectedMemberActivity.class);
+                i.putExtra("member",mAppList.get(position));
+                startActivity(i);
             }
         });
     }
@@ -185,6 +188,7 @@ public class MembersActivity extends ActionBarActivity {
             HashMap<String,String> item = getItem(position);
             holder.iv_icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_person));
             holder.tv_name.setText(item.get("name"));
+
             holder.id_name.setText(item.get("id"));
             return convertView;
         }
