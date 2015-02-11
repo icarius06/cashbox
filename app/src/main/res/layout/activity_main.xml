@@ -14,20 +14,21 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         android:background="?attr/colorPrimary">
+
                 <LinearLayout
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:orientation="vertical">
                 <TextView
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/toolbar_title" />
 
                 <TextView
                     android:paddingTop="5dp"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/agronet"
@@ -35,6 +36,7 @@
                     android:textColor="@color/white"
                     android:textSize="20dp"
                     android:id="@+id/toolbar_subtitle" />
+
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 

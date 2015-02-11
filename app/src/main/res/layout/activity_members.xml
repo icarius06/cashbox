@@ -16,20 +16,20 @@
         android:background="?attr/colorPrimary">
 
         <LinearLayout
-            android:layout_gravity="center"
+            android:layout_gravity="left"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/members_title" />
 
             <TextView
                 android:paddingTop="5dp"
-                android:layout_gravity="center"
+                android:layout_gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/agronet"

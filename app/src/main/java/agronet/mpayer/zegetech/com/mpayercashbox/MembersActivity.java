@@ -12,10 +12,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
@@ -67,6 +69,11 @@ public class MembersActivity extends ActionBarActivity {
         person.put("id","beverage@karizshop.com");
         mAppList.add(person);
 
+        person = new HashMap<String, String>();
+        person.put("name","Angelous Kamande");
+        person.put("id","254788485");
+        mAppList.add(person);
+
         // Getting adapter by passing xml data ArrayList
         SwipeMenuCreator creator = new SwipeMenuCreator() {
 
@@ -76,8 +83,7 @@ public class MembersActivity extends ActionBarActivity {
                 SwipeMenuItem openItem = new SwipeMenuItem(
                         getApplicationContext());
                 // set item background
-                openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                        0xCE)));
+                openItem.setBackground(R.color.primaryColor);
                 // set item width
                 openItem.setWidth(dp2px(90));
                 // set item title
@@ -93,7 +99,7 @@ public class MembersActivity extends ActionBarActivity {
                 SwipeMenuItem deleteItem = new SwipeMenuItem(
                         getApplicationContext());
                 // set item background
-                deleteItem.setBackground(R.color.primaryColor);
+                deleteItem.setBackground(R.color.pink);
                 // set item width
                 deleteItem.setWidth(dp2px(90));
                 // set a icon
@@ -110,14 +116,21 @@ public class MembersActivity extends ActionBarActivity {
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
                 switch (index) {
                     case 0:
-                        // open
+                        Toast.makeText(MembersActivity.this,"Open",Toast.LENGTH_SHORT).show();
                         break;
                     case 1:
-                        // delete
+                        Toast.makeText(MembersActivity.this,"Delete",Toast.LENGTH_SHORT).show();
                         break;
                 }
                 // false : close the menu; true : not close the menu
                 return false;
+            }
+        });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(MembersActivity.this,"Open selected item",Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -172,16 +185,22 @@ public class MembersActivity extends ActionBarActivity {
             HashMap<String,String> item = getItem(position);
             holder.iv_icon.setImageDrawable(getResources().getDrawable(R.drawable.ic_person));
             holder.tv_name.setText(item.get("name"));
+            holder.id_name.setText(item.get("id"));
             return convertView;
         }
 
         class ViewHolder {
             ImageView iv_icon;
             TextView tv_name;
+            TextView id_name;
 
             public ViewHolder(View view) {
                 iv_icon = (ImageView) view.findViewById(R.id.iv_icon);
                 tv_name = (TextView) view.findViewById(R.id.tv_name);
+                Typeface face = Typeface.createFromAsset(getApplicationContext().getAssets(), String.format("fonts/roboto_extralight.ttf"));
+                tv_name.setTypeface(face);
+
+                id_name = (TextView) view.findViewById(R.id.id_name);
                 view.setTag(this);
             }
         }
